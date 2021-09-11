@@ -3,7 +3,7 @@
     <title>reCAPTCHA demo: Simple page</title>
     <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
   </head>
-  <body>
+  <body onload="getResponseFromRecaptcha()">
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lf9Zl0cAAAAACQVteWF7gdahr74T5joDykMTZQ0"></div>
       <script>
