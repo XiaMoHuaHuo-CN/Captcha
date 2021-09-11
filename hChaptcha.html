@@ -29,12 +29,12 @@
                         }
 
                         var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.innerHTML = "验证成功"
+                        logEl.innerHTML = "<b><font color="green" size=5>验证成功</font></b>"
                       };
 
                       var onExpire = function(response) {
                         var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.innerHTML = "token已过期"
+                        logEl.innerHTML = "<b><font color="red" size=5>token已过期</font></b>"
                       };
                 </script>
 
