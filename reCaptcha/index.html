@@ -3,28 +3,12 @@
     <title>reCAPTCHA demo: Simple page</title>
     <script src="https://www.recaptcha.net/recaptcha/api.js?onloadCallback" async defer></script>
   </head>
-  <body onload="getResponseFromRecaptcha()">
+  <body>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lf9Zl0cAAAAACQVteWF7gdahr74T5joDykMTZQ0"></div>
-      <script>
-    var widgetId;
-      var onloadCallback = function() {
-
-        widgetId = grecaptcha.render('robot', {
-          'sitekey': '6Lf9Zl0cAAAAAFOmgwC4J2s5_fRZZLeVh3rraRJC',
-        });
-
-      };
-      function getResponseFromRecaptcha(){
-        var response = grecaptcha.getResponse(widgetId);
-        if (response.length == 0) {
-          console.log('验证成功');
-          return true;
-        } else {
-        getResponseFromRecaptcha();
-        }
-      }
-      </script>
+      <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+    <form action="javascript:alert(grecaptcha.getResponse());">
+    </from>
     </form>
   </body>
 </html>
