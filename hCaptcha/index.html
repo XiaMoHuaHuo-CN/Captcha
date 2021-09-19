@@ -29,14 +29,14 @@
                         if (errorMsgs.length) {
                           errorMsgs[0].parentNode.removeChild(errorMsgs[0]);
                         }
-                        var set = "document.getElementById('Captcha')";
-                        var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.set.innerHTML += "<p>验证成功</p>"
+
+                        var logEl = document.querySelector(".hcaptcha-success").getElementById('Captcha');
+                        logEl.innerHTML += "<p>验证成功</p>"
                       };
 
                       var onExpire = function(response) {
-                        var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.set.innerHTML += "<p>token已过期</p>"
+                        var logEl = document.querySelector(".hcaptcha-success").getElementById('Captcha');
+                        logEl.innerHTML += "<p>token已过期</p>"
                       };
                 </script>
 
