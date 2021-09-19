@@ -7,8 +7,6 @@
 <script src="https://js.hcaptcha.com/1/api.js?reportapi=https%3A%2F%2Faccounts.hcaptcha.com&custom=False" type="text/javascript" async defer></script>
 <style type="text/css">
       code { font-family: 'Courier New', Courier, monospace; background-color: lightgrey;}
-    }
-    }
     </style>
 </head>
 <body>
@@ -33,12 +31,12 @@
                         }
 
                         var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.innerHTML = "验证成功"
+                        logEl.innerHTML += "<p>验证成功</p>"
                       };
 
                       var onExpire = function(response) {
                         var logEl = document.querySelector(".hcaptcha-success");
-                        logEl.innerHTML = "token已过期"
+                        logEl.innerHTML += "<p>token已过期</p>"
                       };
                 </script>
 
