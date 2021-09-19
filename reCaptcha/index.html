@@ -8,13 +8,10 @@
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lf9Zl0cAAAAACQVteWF7gdahr74T5joDykMTZQ0"></div>
       <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
-    <form action="javascript:alert(grecaptcha.getResponse());">
       <script>
        var logEl = document.grecaptcha.getResponse();
-       logEl.innerHTML = "验证成功"
+       logEl.innerHTML += "验证成功"
       </script>
-    };
-    </from>
     </form>
   </body>
 </html>
