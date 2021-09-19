@@ -87,9 +87,9 @@
                      
                              serverToken=vaptchaObj.getServerToken()
                              // 验证成功进行后续操作
-                         if(serverToken){
+                         
                              document.getElementById("vaptchaspan").innerHTML = "验证成功";
-                             }})
+                             })
                          })
                          //关闭验证弹窗时触发
                          vaptchaObj.listen('close', function () {
