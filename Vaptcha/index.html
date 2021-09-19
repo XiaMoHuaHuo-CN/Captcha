@@ -64,6 +64,7 @@
                             </div>
                         </div>
                      </div>
+                       <span id="vaptchaspan"></span>
                         <script src="https://v-cn.vaptcha.com/v3.js"></script>
                      <script lang="javascript/text">
                      vaptcha({
@@ -86,15 +87,8 @@
                      
                              serverToken=vaptchaObj.getServerToken()
                              // 验证成功进行后续操作
-                             var data = {
-                                 server:serverToken.server,
-                                 token: serverToken.token,
-                             }
-                             $.post('login', data, function (r) {
-                                 if (r.code !== 200) {
-                                     console.log('验证失败')
-                                     vaptchaObj.reset() //重置 VAPTCHA
-                                 }
+                             var dom = document.getElementById("vaptchaspan");
+                             dom.innerHTML = "验证成功";
                              })
                          })
                          //关闭验证弹窗时触发
